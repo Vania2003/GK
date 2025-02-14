@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WebGL</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="runWebGL()">
+    <canvas id="glcanvas" width="500" height="300">
+        Brak wsparcia dla elementu HTML5 typu
+        canvas.
+    </canvas>
+    <script src="js/main.js"></script>
+    <script src="js/matrix.js"></script>
+    <form>
+        <label for="shape">Wybierz figurę:</label>
+        <select id="shape" onchange="changeShape()">
+            <option value="tetrahedron">Czworościan</option>
+            <option value="cube">Sześcian</option>
+        </select>
+        <br>
+        <input type="checkbox" id="rotateX"> Rotacja X
+        <input type="checkbox" id="rotateY"> Rotacja Y
+        <input type="checkbox" id="rotateZ"> Rotacja Z
+        <br>
+        <input type="number" id="num1" placeholder="0.001" step="0.001" min="0" max="1" value="0.001" />
+        <br>
+        <input type="button" value="Uruchom" onclick="runWebGL()" />
+    </form>
+    
+</body>
+
+</html>
